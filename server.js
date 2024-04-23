@@ -1,9 +1,10 @@
 import http from 'http'
+import { randomNumber } from './utils.js'
 
 const server = http.createServer((req, res) => {
   res.writeHead(200, { 'Content-Type': 'text/html' })
   res.end(
-    '<h1 style="color: MediumSlateBlue; font-family: sans-serif;">Hello</h1>'
+    `<h1 style="color: MediumSlateBlue; font-family: sans-serif;">Random Number: ${randomNumber}</h1>`
   )
 })
 
