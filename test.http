@@ -1,2 +1,8 @@
 ### GET /
 GET http://localhost:4000/
+
+### GET /random-number
+GET http://localhost:4000/random-number
+
+### GET /hey NOT FOUND
+GET http://localhost:4000/hey
