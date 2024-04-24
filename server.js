@@ -3,9 +3,15 @@
 import * as dotenv from 'dotenv'
 dotenv.config()
 import http from 'http'
-import { randomNumber } from './utils.js'
+import fs from 'fs/promises'
+import url from 'url'
+import path from 'path'
 
-const server = http.createServer((req, res) => {
+// Get current path
+const __filename = url.fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+
+const server = http.createServer(async (req, res) => {
   // Log the request method and URL
   console.log(req.url)
   console.log(req.method)
@@ -14,24 +20,28 @@ const server = http.createServer((req, res) => {
   try {
     // Check if GET request
     if (req.method === 'GET') {
-      // * Homepage
+      let filePath
+
+      // * Home
       if (req.url === '/') {
-        res.writeHead(200, { 'Content-Type': 'text/html' })
-        res.end(
-          `<h1>Homepage</h1><a href='/random-number'>Get Random Number</a>`
-        )
-        // TIP: res.write('Hello') can also be used to send a response
-
-        // * /random-number
-      } else if (req.url === '/random-number') {
-        res.writeHead(200, { 'Content-Type': 'text/html' })
-        res.end(`<h1>Random Number: ${randomNumber}</h1><a href='/'>Home</a>`)
-
-        // * Not Found
-      } else {
-        res.writeHead(404, { 'Content-Type': 'text/html' })
-        res.end(`<h1>Not Found</h1><a href='/'>Home</a>`)
+        filePath = path.join(__dirname, 'public', 'index.html')
       }
+
+      // * /about
+      else if (req.url === '/about') {
+        filePath = path.join(__dirname, 'public', 'about.html')
+      }
+
+      // * Not Found
+      else {
+        throw new Error('Page Not Found')
+      }
+
+      // * Read the file and send it as a response
+      const data = await fs.readFile(filePath)
+      res.writeHead(200, { 'Content-Type': 'text/html' })
+      res.write(data)
+      res.end()
 
       // If not a GET request
     } else {
