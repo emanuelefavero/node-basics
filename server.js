@@ -6,7 +6,15 @@ import http from 'http'
 import { randomNumber } from './utils.js'
 
 const server = http.createServer((req, res) => {
+  // Log the request method and URL
+  console.log(req.url)
+  console.log(req.method)
+
+  // Set the response header
   res.writeHead(200, { 'Content-Type': 'text/html' })
+
+  // Send the response
+  // TIP: res.write('Hello') can also be used to send a response
   res.end(
     `<h1 style="color: MediumSlateBlue; font-family: sans-serif;">Random Number: ${randomNumber}</h1>`
   )
