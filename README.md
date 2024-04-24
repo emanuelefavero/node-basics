@@ -44,6 +44,10 @@ This is a simple Node.js project that demonstrates the basic features of Node.js
 
 - Run `npm run url` to test the `url` module
 
+### Crypto
+
+- Run `npm run crypto` to test the `crypto` module
+
 ## Resources
 
 - [Node.js](https://nodejs.org/)

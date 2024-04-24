@@ -9,7 +9,8 @@
     "fs": "nodemon fs",
     "path": "nodemon path",
     "os": "nodemon os",
-    "url": "nodemon url"
+    "url": "nodemon url",
+    "crypto": "nodemon crypto"
   },
   "keywords": [],
   "author": "Emanuele Favero",
