@@ -1,0 +1,11 @@
+### GET /api/users
+GET http://localhost:4000/api/users
+
+### GET /api/users/:id
+GET http://localhost:4000/api/users/1
+
+### GET Route Not Found
+POST http://localhost:4000/api/hey
+
+### GET User NOT Found
+GET http://localhost:4000/api/users/100
