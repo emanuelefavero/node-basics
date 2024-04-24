@@ -6,7 +6,8 @@
   "scripts": {
     "router": "nodemon router",
     "api": "nodemon api",
-    "fs": "nodemon fs"
+    "fs": "nodemon fs",
+    "path": "nodemon path"
   },
   "keywords": [],
   "author": "Emanuele Favero",

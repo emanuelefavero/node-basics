@@ -32,6 +32,10 @@ This is a simple Node.js project that demonstrates the basic features of Node.js
 
 - Run `npm run fs` to test the `fs` module
 
+### Path
+
+- Run `npm run path` to test the `path` module
+
 ## Resources
 
 - [Node.js](https://nodejs.org/)
