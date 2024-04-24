@@ -24,24 +24,32 @@ const server = http.createServer(async (req, res) => {
 
       // * Home
       if (req.url === '/') {
+        res.statusCode = 200
         filePath = path.join(__dirname, 'public', 'index.html')
       }
 
       // * /about
       else if (req.url === '/about') {
+        res.statusCode = 200
         filePath = path.join(__dirname, 'public', 'about.html')
       }
 
       // * Not Found
       else {
-        throw new Error('Page Not Found')
+        res.statusCode = 404
+        filePath = path.join(__dirname, 'public', 'not-found.html')
+
+        // TIP: You could also throw an error instead of returning a 404 page
+        // throw new Error('Page Not Found')
       }
 
       // * Read the file and send it as a response
       const data = await fs.readFile(filePath)
-      res.writeHead(200, { 'Content-Type': 'text/html' })
+      res.setHeader('Content-Type', 'text/html')
       res.write(data)
       res.end()
+
+      // TIP: Use `res.writeHead(200, { 'Content-Type': 'text/html' })` to set both status code and content type
 
       // If not a GET request
     } else {
