@@ -28,6 +28,10 @@ This is a simple Node.js project that demonstrates the basic features of Node.js
 >
 > Note: To run the `*.http` files, you need to install the [Rest Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) extension in VS Code
 
+### FS
+
+- Run `npm run fs` to test the `fs` module
+
 ## Resources
 
 - [Node.js](https://nodejs.org/)
