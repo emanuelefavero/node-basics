@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "router": "nodemon router",
-    "api": "nodemon api"
+    "api": "nodemon api",
+    "fs": "nodemon fs"
   },
   "keywords": [],
   "author": "Emanuele Favero",
