@@ -1,6 +1,15 @@
 ### GET /api/users
 GET http://localhost:4000/api/users
 
+### POST /api/users
+POST http://localhost:4000/api/users
+Content-Type: application/json
+
+{
+  "id": 4,
+  "name": "Saul Goodman"
+}
+
 ### GET /api/users/:id
 GET http://localhost:4000/api/users/1
 

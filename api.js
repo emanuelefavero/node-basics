@@ -20,6 +20,23 @@ const jsonHeader = (req, res, next) => {
   next()
 }
 
+// * Route Handler for POST /api/users
+const createUserHandler = (req, res) => {
+  let body = ''
+
+  // Collect the request body
+  req.on('data', (chunk) => {
+    body += chunk.toString()
+  })
+
+  req.on('end', () => {
+    const newUser = JSON.parse(body)
+    users.push(newUser)
+    res.statusCode = 201
+    res.write(JSON.stringify(newUser))
+  })
+}
+
 const server = createServer((req, res) => {
   logger(req, res, () => {
     jsonHeader(req, res, () => {
@@ -44,6 +61,11 @@ const server = createServer((req, res) => {
           res.statusCode = 404
           res.write(JSON.stringify({ message: 'User Not Found' }))
         }
+      }
+
+      // * Handle POST /api/users
+      else if (req.url === '/api/users' && req.method === 'POST') {
+        createUserHandler(req, res)
       }
 
       // * Handle Route Not Found
