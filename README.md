@@ -40,6 +40,10 @@ This is a simple Node.js project that demonstrates the basic features of Node.js
 
 - Run `npm run os` to test the `os` module
 
+### URL
+
+- Run `npm run url` to test the `url` module
+
 ## Resources
 
 - [Node.js](https://nodejs.org/)

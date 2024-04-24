@@ -8,7 +8,8 @@
     "api": "nodemon api",
     "fs": "nodemon fs",
     "path": "nodemon path",
-    "os": "nodemon os"
+    "os": "nodemon os",
+    "url": "nodemon url"
   },
   "keywords": [],
   "author": "Emanuele Favero",
