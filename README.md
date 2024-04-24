@@ -8,7 +8,9 @@ This is a simple Node.js project that demonstrates the basic features of Node.js
 
 1. Clone the project and `cd` into the project directory
 2. Run `npm install`
-3. Run `npm run dev`
+
+- To run the `router` example, run `npm run router`
+- To run the `api` example, run `npm run api`
 
 > Note: You can also add an environment variable `PORT` to specify the port number. The default port is `4000`.
 
