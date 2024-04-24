@@ -14,7 +14,7 @@ const server = http.createServer((req, res) => {
   try {
     // Check if GET request
     if (req.method === 'GET') {
-      // * /
+      // * Homepage
       if (req.url === '/') {
         res.writeHead(200, { 'Content-Type': 'text/html' })
         res.end(
@@ -32,9 +32,13 @@ const server = http.createServer((req, res) => {
         res.writeHead(404, { 'Content-Type': 'text/html' })
         res.end(`<h1>Not Found</h1><a href='/'>Home</a>`)
       }
+
+      // If not a GET request
     } else {
-      throw new Error('Method Not Allowed')
+      throw new Error(`${req.method} Method Not Allowed`)
     }
+
+    // Catch any errors
   } catch (error) {
     res.writeHead(500, { 'Content-Type': 'text/plain' })
     res.end(`Server Error: ${error.message}`)

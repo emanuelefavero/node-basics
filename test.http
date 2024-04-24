@@ -4,5 +4,8 @@ GET http://localhost:4000/
 ### GET /random-number
 GET http://localhost:4000/random-number
 
-### GET /hey NOT FOUND
+### GET /hey - NOT FOUND
 GET http://localhost:4000/hey
+
+### POST / - Server Error: POST Method Not Allowed
+POST http://localhost:4000/
