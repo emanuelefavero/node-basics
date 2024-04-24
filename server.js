@@ -1,3 +1,7 @@
+// TIP: dotenv needs to be installed as a dependency: `npm i dotenv`
+// If you want to pass env variables without installing dotenv, you can use the following command when running the server: `node --env-file=.env server.js`
+import * as dotenv from 'dotenv'
+dotenv.config()
 import http from 'http'
 import { randomNumber } from './utils.js'
 
