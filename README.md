@@ -16,3 +16,7 @@ This is a simple Node.js project that demonstrates the basic features of Node.js
 
 - [Node.js](https://nodejs.org/)
 - [Node.js Docs](https://nodejs.org/en/docs/)
+
+## License
+
+- [MIT](LICENSE.md)
