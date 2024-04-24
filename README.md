@@ -36,6 +36,10 @@ This is a simple Node.js project that demonstrates the basic features of Node.js
 
 - Run `npm run path` to test the `path` module
 
+### OS
+
+- Run `npm run os` to test the `os` module
+
 ## Resources
 
 - [Node.js](https://nodejs.org/)

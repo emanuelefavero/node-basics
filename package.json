@@ -7,7 +7,8 @@
     "router": "nodemon router",
     "api": "nodemon api",
     "fs": "nodemon fs",
-    "path": "nodemon path"
+    "path": "nodemon path",
+    "os": "nodemon os"
   },
   "keywords": [],
   "author": "Emanuele Favero",
