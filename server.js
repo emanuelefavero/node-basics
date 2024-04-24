@@ -10,14 +10,23 @@ const server = http.createServer((req, res) => {
   console.log(req.url)
   console.log(req.method)
 
-  // Set the response header
-  res.writeHead(200, { 'Content-Type': 'text/html' })
+  // Create a basic router
+  // * /
+  if (req.url === '/') {
+    res.writeHead(200, { 'Content-Type': 'text/html' })
+    res.end(`<h1>Homepage</h1><a href='/random-number'>Get Random Number</a>`)
+    // TIP: res.write('Hello') can also be used to send a response
 
-  // Send the response
-  // TIP: res.write('Hello') can also be used to send a response
-  res.end(
-    `<h1 style="color: MediumSlateBlue; font-family: sans-serif;">Random Number: ${randomNumber}</h1>`
-  )
+    // * /random-number
+  } else if (req.url === '/random-number') {
+    res.writeHead(200, { 'Content-Type': 'text/html' })
+    res.end(`<h1>Random Number: ${randomNumber}</h1><a href='/'>Home</a>`)
+
+    // * Not Found
+  } else {
+    res.writeHead(404, { 'Content-Type': 'text/html' })
+    res.end(`<h1>Not Found</h1><a href='/'>Home</a>`)
+  }
 })
 
 const PORT = process.env.PORT || 4000
