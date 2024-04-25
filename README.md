@@ -54,7 +54,7 @@ This is a simple Node.js project that demonstrates the basic features of Node.js
 
 ### Process
 
-- Run `npm run process` to test the `process` module
+- Run `npm run process` to test the `process` object
 
 ## Resources
 
