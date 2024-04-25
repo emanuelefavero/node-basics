@@ -52,6 +52,10 @@ This is a simple Node.js project that demonstrates the basic features of Node.js
 
 - Run `npm run events` to test the `events` module
 
+### Process
+
+- Run `npm run process` to test the `process` module
+
 ## Resources
 
 - [Node.js](https://nodejs.org/)
