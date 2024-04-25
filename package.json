@@ -10,7 +10,8 @@
     "path": "nodemon path",
     "os": "nodemon os",
     "url": "nodemon url",
-    "crypto": "nodemon crypto"
+    "crypto": "nodemon crypto",
+    "events": "nodemon events"
   },
   "keywords": [],
   "author": "Emanuele Favero",
